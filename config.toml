@@ -42,9 +42,13 @@ recent_posts_number = 999
   background_color_class = "bg-black"
   site_background_image = ""
   cover_dimming_class = "bg-black-20"
-  env = "development" # development | production
+  env = "production" # development | production
   social_image = "/images/aga-social.jpg"
 
 [[params.ananke_socials]]
 name = "twitter"
 url = "https://twitter.com/"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
