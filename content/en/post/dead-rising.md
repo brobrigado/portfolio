@@ -32,6 +32,3 @@ gallery:
     image: "/images/projects/dr/dr-social.png"
     title: "Dead Rising Social Page"
 ---
-
-
-We were honored to build a site dedicated to the entire Dead Rising franchise. The campy zombie horror of the games infected the entire website. Interactive features were inspired by the game’s combo weapons. It was wild to combine assets from all the games (some of them being ten years old) into a cohesive package. We even contributed to the marketing copy.

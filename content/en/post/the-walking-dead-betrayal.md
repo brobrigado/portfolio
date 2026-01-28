@@ -13,6 +13,3 @@ gallery:
     image: "/images/projects/twdb/the-walking-dead-betrayal.png"
     title: "Homepage"
 ---
-
-
-Skybound gave us another chance to help them sell games. The Walking Dead: Betrayal puts you and your friends in a 5-8 person game of cooperation and social deception set in the universe of The Walking Dead. We captured the devious horror present in this game and put it in a microsite designed to sell the game on Steam.

@@ -32,5 +32,3 @@ gallery:
     title: "Support Page"
 ---
 
-
-Back in March of 2021 we were asked to revamp the existing Arc System Works America corporate website. The honor of this was not lost on us. That revamp went live in July of that year. Since then we’ve done a full redesign and added a Netflix-style games selection feature. Every page is designed to help ASWA sell more games and DLC.

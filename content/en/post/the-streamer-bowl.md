@@ -13,6 +13,3 @@ gallery:
     image: "/images/projects/tsb/tsb.png"
     title: "Homepage"
 ---
-
-
-A lunchtime text came through from Twitch asking if we could build a site featuring popular streamers and NFL athletes who play Fortnite. Our answer was an immediate yes. What followed was our chance to showcase sixteen Fornite duos (one streamer and one NFL player) battling it out for their favorite charities. It also gave us an opportunity to work directly with Twitch developers using technology that was new to us.

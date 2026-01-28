@@ -37,6 +37,3 @@ gallery:
     image: "/images/projects/sfv/sfv-sf30-tournament.png"
     title: "Street Fighter 30th Anniversary Tournament Page"
 ---
-
-
-Being trusted with the official Street Fighter website during the Street Fighter V era changed the world for us. We were there before the game’s announcement and launch all the way through the end of Season 5. Updates included new characters and how to play them, balance changes, and new game versions. Fans of the game always had a reason to keep visiting the site. While there they could also purchase the latest season, the newest version of the game, and all the related merchandise. In 2018 we included the Street Fighter 30th Anniversary Collection and its stand-alone tournament series.

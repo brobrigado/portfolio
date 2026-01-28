@@ -81,9 +81,13 @@ aside {
 }
 
 .tags {
+    .list {
+        margin-right: 0.2rem;
+    }
     a {
         color: #cacaca;
         text-decoration: none;
+        font-size: 0.9rem;
     
         &:hover {
             color: #fff; // $color--alt;
@@ -183,4 +187,12 @@ p + h2, p + h3 {
 
 .instapaper_ignoref {
     display: none;
+}
+
+.summary {
+    h1 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.25rem;
+    }
 }

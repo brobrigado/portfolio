@@ -34,6 +34,3 @@ gallery:
     image: "/images/projects/scwt/scwt-standings.png"
     title: "Standings Page"
 ---
-
-
-Our continued success with esports and gaming websites that make spectating and participation fun and easy had Bandai Namco put us to work on the Soul Calibur World Tour website. This project included cumulative point scoring systems and our tried-and-true preservation of player performance history. Unfortunately, only one event concluded before the pandemic put a stop to every in-person fighting game tour world-wide

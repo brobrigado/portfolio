@@ -13,6 +13,3 @@ gallery:
     image: "/images/projects/drg/deep-rock-galactic.png"
     title: "Homepage"
 ---
-
-
-We were honored with another chance to do work for Skybound. This game is a 1-4 player co-op FPS featuring badass space dwarves, 100% destructible environments, procedurally-generated caves, and endless hordes of alien monsters. We captured the action of the game and put it in a microsite aimed at collectors who want physical copies of their favorite games.

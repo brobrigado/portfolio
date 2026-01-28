@@ -13,6 +13,3 @@ gallery:
     image: "/images/projects/bab/bear-and-breakfast.png"
     title: "Homepage"
 ---
-
-
-More than a decade of service to the video game industry gave us a chance to do work for Skybound and iam8bit. We captured the fun and whimsy of Bear and Breakfast and put it in a microsite designed to sell newly-minted physical copies of so many people’s favorite game.

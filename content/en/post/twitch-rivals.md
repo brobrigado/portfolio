@@ -37,6 +37,3 @@ gallery:
     image: "/images/projects/tr/tr-streamer-bowl-ii.png"
     title: "Streamer Bowl Page 2"
 ---
-
-
-Our continued success with esports and gaming websites that make participation and spectating fun and easy prompted Twitch to put us to work on the Twitch Rivals website. This project was the first historical documentation of streamer performance in official Rivals events. Every Event included details, prizing, and results. Every participating streamer had their own profile page complete with key stats and featured clips. Fans could easily search their favorite games to see who played them the best.

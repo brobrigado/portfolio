@@ -40,6 +40,3 @@ gallery:
     image: "images/projects/dbfzwt/dbfzwt-standings-02.png"
     title: "Standings Page 2"
 ---
-
-
-Our continued success with esports and gaming websites that make spectating and participation fun and easy inspired Bandai Namco and Twitch to have us build the Dragon Ball FighterZ World Tour website. This project included winner-take-all qualification events and cumulative point scoring systems, and our tried-and-true preservation of player performance history

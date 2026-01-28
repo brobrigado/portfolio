@@ -14,5 +14,3 @@ gallery:
     title: "Homepage"
 ---
 
-
-Skybound and iam8bit gave us another chance to do work for them. In this game, you start your own cypher and dance, paint, trick, and then stake your claim to the extrusions and cavities of a sprawling metropolis in an alternate future set to the musical brainwaves of Hideki Naganuma. We captured the musicality of the game and put it in a microsite designed to appeal to game collectors world-wide.

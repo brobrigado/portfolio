@@ -37,6 +37,3 @@ gallery:
     image: "/images/projects/sfl/sfl-team-page.png"
     title: "Team Page"
 ---
-
-
-For the first time, CAPCOM created a professional Street Fighter league. It began with the eighteen most popular players in the United States. These players formed teams of three that battled it out for weeks until each team had played every other team twice and a winner was revealed. Six seasons later, the league is still going strong. The league now has four player teams and sixteen weeks per season. The site features every player, team, season, and all the relevant stats for teams, players, and the characters they use

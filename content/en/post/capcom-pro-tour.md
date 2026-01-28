@@ -40,6 +40,3 @@ gallery:
     image: "/images/projects/cpt/cpt-videos-2019.png"
     title: "Event Videos"
 ---
-
-
-Capcom Cup 2013 was such a hit that Capcom asked us to create a site supporting a year-long global esports competition featuring Ultra Street Fighter IV. We pored over the biggest esports endeavors of the era and built a site that documented a newly energized fighting game community and drove the world’s best competitors to reveal the pinnacle of their Street Fighter prowess and spirit. The resulting website attracted visitors and gave them reason to come back after every event to see where their favorite players were in the standings. Year by year the Capcom Pro Tour site grew ever larger with well-documented history. We designed, developed, updated, and improved this site from its launch in 2014 through the end of the Street Fighter V era in 2023.

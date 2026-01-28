@@ -37,6 +37,3 @@ gallery:
     image: "/images/projects/twt/twt-standings.png"
     title: "Player Standings Page"
 ---
-
-
-Our success with gaming and esports websites that make participation and spectating easy and fun inspired Bandai Namco and Twitch to have us build the Tekken World Tour website to track the success of Tekken 7 players world-wide. This project included innovative tiered point scoring systems, data imports from external sites, and our tried-and-true preservation of player performance history

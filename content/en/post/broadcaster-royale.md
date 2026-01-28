@@ -13,6 +13,3 @@ gallery:
     image: "/images/projects/br/br.png"
     title: "Homepage"
 ---
-
-
-To showcase the best PUBG players, Twitch put together the Broadcaster Royal tournament: A two-month global competition culminating in a grand finale featuring the forty best duos from all over the world. Twitch asked us to help grow the PUBG community, increase the use of twitch.tv, and sell DLC by building an esports website that covered the tournament from beginning to end. A key component was a hero section that would automatically update whenever popular streamers were playing PUBG

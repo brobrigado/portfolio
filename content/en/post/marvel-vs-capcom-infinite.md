@@ -25,6 +25,3 @@ gallery:
     image: "/images/projects/mvci/mvci-features.png"
     title: "Features Page"
 ---
-
-
-Getting the chance to build a website for such an iconic game series was an extraordinary opportunity. During the build, we overcame unique challenges: Every main page needed to display without scrolling and embedded video needed to fill the background and bring the site to life with action the moment each page loaded. Players could revisit the site for tutorial videos every time they learned a new character. Fans and competitors could follow the CAPCOM sponsored Battle of the Stones tournament.

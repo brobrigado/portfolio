@@ -13,6 +13,3 @@ gallery:
     image: "/images/projects/nw/neon-white.png"
     title: "Homepage"
 ---
-
-
-Our service to the video game industry gave us another chance to do work for Skybound and iam8bit. Neon White is a lightning fast first-person action game about exterminating demons in Heaven. We captured the intensity of the game and put it in a microsite designed to sell physical copies to collectors world-wide.

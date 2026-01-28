@@ -19,6 +19,3 @@ gallery:
     image: "/images/projects/cc2013/umvc3.png"
     title: "Ultimate Marvel vs Capcom 3 Tournament Page"
 ---
-
-
-The success of the Street Fighter 25th finals ushered in the very first CAPCOM Cup. We saw it announced online, discovered that all the info was limited to a jpeg and some text, and made a phone call to Capcom that reshaped our company for the better. What followed was our opportunity to build a multi-page site featuring streamed matches showcasing the best players of Super Street Fighter IV: Arcade Edition, Ultimate Marvel vs. Capcom 3, and Street Fighter x Tekken
