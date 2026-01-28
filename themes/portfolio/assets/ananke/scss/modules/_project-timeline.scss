@@ -3,7 +3,7 @@ $color--project-timeline-bar: $color--timeline-color;
 $color--project-timeline-bar-endpoint: $color--timeline-color;
 
 .project-timeline {
-    margin-top: 4rem;
+    margin-top: 1rem;
     padding-bottom: 2rem;
     position: relative;
 
@@ -31,6 +31,27 @@ $color--project-timeline-bar-endpoint: $color--timeline-color;
         z-index: 10;
         margin: 0 auto;
         border-radius: 50%;
+    }
+
+    &--project:first-child {
+        .project-timeline--details {
+            padding: 0rem 3rem 3rem;
+            margin-top: -4px;
+
+            .project-timeline--details-box::before {
+                background: #015871;
+                content: "";
+                width: 0px;
+                height: 0px;
+                left: 0;
+                right: 0;
+                top: 0;
+                position: absolute;
+                z-index: 10;
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+        }
     }
 
     &--project {
@@ -152,6 +173,20 @@ $color--project-timeline-bar-endpoint: $color--timeline-color;
         background-color: $color--main;
         // border-top: 2px solid #444;
         // border-bottom: 2px solid #444;
+
+        &::before {
+            background: $color--project-timeline-bar-endpoint;
+            content: "";
+            width: 12px;
+            height: 12px;
+            left: 0;
+            right: 0;
+            top: 0;
+            position: absolute;
+            z-index: 10;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
 
         &::after {
             background: $color--project-timeline-bar-endpoint;
