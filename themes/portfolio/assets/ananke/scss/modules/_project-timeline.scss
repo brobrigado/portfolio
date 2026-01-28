@@ -1,5 +1,6 @@
-$color--project-timeline-bar: #444;
-$color--project-timeline-bar-endpoint: #444;
+$color--timeline-color: #015871; //$color--main-light;
+$color--project-timeline-bar: $color--timeline-color;
+$color--project-timeline-bar-endpoint: $color--timeline-color;
 
 .project-timeline {
     margin-top: 4rem;
@@ -209,7 +210,7 @@ $color--project-timeline-bar-endpoint: #444;
         line-height: 0.8em;
         text-transform: uppercase;
         text-align: center;
-        -webkit-text-stroke-color: #444;
+        -webkit-text-stroke-color: $color--timeline-color;
 
         @include atSmall {
             font-size: 6rem;

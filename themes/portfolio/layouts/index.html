@@ -1,71 +1,39 @@
 {{ define "main" }}
 
-  <section id="clients" class="bg-top cover" style="background-image: url({{ .Params.clients_bg }});">
-    <div class="bg-black-60">
+  <section id="clients" class="bg-top cover bg-clients" >
 
-        <div class="content-section pa3 pa4-ns pt5-ns pb5-ns mw8 center clients-container">
-          {{ if .Params.clients_title }}
-          <div class="title-container mt4 mb4 mt0-ns mb4-ns">
-            {{ if .Params.clients_title_graphic }}
-              {{/*  <img class="animate__animated animate__tada" src="{{ .Params.clients_title_graphic }}" alt="{{ .Params.clients_title }}">  */}}
-              <div class="animate__animated animate__fadeInUp animate__delay-3s">
-                <img class="heartbeat" src="{{ .Params.clients_title_graphic }}" alt="{{ .Params.clients_title }}">
-              </div>
-            {{ end }}
-            <h2 class="f2 f1-ns lh-solid ma0 tc white">{{ .Params.clients_title }}</h2>
-          </div>
+<div class="custom-shape-divider-bottom-1769583005">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div>
+
+      <div class="content-section pa3 pa4-ns pt5-ns pb5-ns mw8 center clients-container">
+        <h2 class="f2 f1-ns lh-solid ma0 tc white">{{ .Params.clients_title }}</h2>
+
+        <div class="client-logos">
+          {{ range $clients_logos := .Params.clients_logos }}
+          {{ if $clients_logos.link }}
+            <a class="client-logos--link {{ $clients_logos.css_class }}" target="_blank" href="{{ $clients_logos.link }}">
+              <img src="{{ $clients_logos.image }}">
+            </a>
+          {{ else }}
+            <div class="client-logos--link {{ $clients_logos.css_class }}">
+              <img src="{{ $clients_logos.image }}">
+            </div>
           {{ end }}
-
-          <div class="client-logos">
-            {{ range $clients_logos := .Params.clients_logos }}
-            {{ if $clients_logos.link }}
-              <a class="client-logos--link {{ $clients_logos.css_class }}" target="_blank" href="{{ $clients_logos.link }}">
-                <img src="{{ $clients_logos.image }}">
-              </a>
-            {{ else }}
-              <div class="client-logos--link {{ $clients_logos.css_class }}">
-                <img src="{{ $clients_logos.image }}">
-              </div>
-            {{ end }}
-          {{ end }}
-          </div>
-
-        </div>
-
-    </div>
-  </section>
-
-  <section id="services" class="bg-top contain bg-black" style="background-image: url({{ .Params.services_bg }});">
-    <div class="bg-black-10">
-
-      <div class="content-section pa3 pa4-ns pt5-ns pb2-ns mw9 center">
-        {{ if .Params.services_title }}
-        <div class="title-container mt4 mb4 mt0-ns mb4-ns">
-          {{ if .Params.services_title_graphic }}
-            <img class="heartbeat"  src="{{ .Params.services_title_graphic }}" alt="{{ .Params.services_title }}">
-          {{ end }}
-          <h2 class="f2 f1-ns lh-solid ma0 tc white">{{ .Params.services_title }}</h2>
-        </div>
         {{ end }}
-
-        {{ partial "home-services.html" . }}
+        </div>
 
       </div>
-    </div>
+
+
   </section>
 
   <section id="projects" class="bg-top" style="background-image: url({{ .Params.projects_bg }});">
 
-
       <div class="content-section pa3 pa4-ns pt5-ns pb5-ns mw9 center">
-        {{ if .Params.projects_title }}
-        <div class="title-container mt4 mb4 mt0-ns mb4-ns">
-          {{ if .Params.projects_title_graphic }}
-            <img class="heartbeat"  src="{{ .Params.projects_title_graphic }}" alt="{{ .Params.projects_title }}">
-          {{ end }}
-          <h2 class="f2 f1-ns lh-solid ma0 tc white">{{ .Params.projects_title }}</h2>
-        </div>
-        {{ end }}
+        <h2 class="f2 f1-ns lh-solid ma0 tc white">{{ .Params.projects_title }}</h2>
 
     {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
     {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
@@ -101,32 +69,6 @@
 
       </div>
 
-  </section>
-
-  <section id="contact" style="background-image: url({{ .Params.contact_bg }});">
-    <div class="bg-black-60">
-
-        <div class="content-section pa3 pa4-ns pt5-ns pb5-ns mw9 center contact-container">
-          {{ if .Params.contact_title }}
-          <div class="title-container mt4 mb4 mt0-ns mb4-ns">
-            {{ if .Params.contact_title_graphic }}
-              <img class="heartbeat"  src="{{ .Params.contact_title_graphic }}" alt="{{ .Params.contact_title }}">
-            {{ end }}
-            <h2 class="f2 f1-ns lh-solid ma0 tc white">{{ .Params.contact_title }}</h2>
-          </div>
-          {{ end }}
-          <div class="grid grid--1column">
-            <div class="column">
-              <div class="contact-form tc">
-                <div class="nested-copy-line-height lh-copy f4 nested-links white">
-                  {{ partial "contact-form.html" . }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
 {{ end }}

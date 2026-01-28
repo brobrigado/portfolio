@@ -5,9 +5,10 @@ $screenSize--large: 1200px; //1440px; //1080px; //65ch;
 $screenSize--max: 2000px;
 
 /* Colors */
-$color--main: #111;
+// $color--main: #111;
+$color--main: #001424;
 $color--main-dark: darken($color--main, 20%);
-$color--main-light: lighten($color--main, 4%);
+$color--main-light: lighten($color--main, 16%);
 // $color--alt: #D42126;
 $color--alt: #0f2081;
 $color--alt-hover: darken($color--alt, 6%);

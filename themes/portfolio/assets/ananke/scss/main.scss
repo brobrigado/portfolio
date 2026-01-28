@@ -8,6 +8,7 @@
 @import "utilities/text-stroke";
 @import "utilities/text-stagger";
 @import "utilities/text-animation";
+@import "utilities/ocean";
 @import "grid";
 @import "modules/nav";
 @import "modules/hero-area";
@@ -30,6 +31,7 @@
 @import "modules/content-section";
 @import "modules/gallery";
 @import "modules/mfp";
+@import "modules/section-backgrounds";
 
 // *{scroll-behavior: smooth;}
 
@@ -152,8 +154,8 @@ aside {
         font-weight: 700;
     }
 
-    h2, h3, h4, h5 {
-        letter-spacing: -0.05em;
+    h1, h2, h3, h4, h5 {
+        letter-spacing: -0.01em;
     }
 }
 
