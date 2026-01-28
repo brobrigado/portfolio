@@ -13,16 +13,20 @@
 
         <div class="client-logos">
           {{ range $clients_logos := .Params.clients_logos }}
-          {{ if $clients_logos.link }}
-            <a class="client-logos--link {{ $clients_logos.css_class }}" target="_blank" href="{{ $clients_logos.link }}">
-              <img src="{{ $clients_logos.image }}">
-            </a>
-          {{ else }}
-            <div class="client-logos--link {{ $clients_logos.css_class }}">
-              <img src="{{ $clients_logos.image }}">
-            </div>
+            {{ if $clients_logos.link }}
+              <a class="client-logos--link {{ $clients_logos.css_class }}" target="_blank" href="{{ $clients_logos.link }}">
+                {{ with resources.Get $clients_logos.image }}
+                  <img src="{{ .RelPermalink }}">
+                {{ end }}
+              </a>
+            {{ else }}
+              <div class="client-logos--link {{ $clients_logos.css_class }}">
+                {{ with resources.Get $clients_logos.image }}
+                  <img src="{{ .RelPermalink }}">
+                {{ end }}
+              </div>
+            {{ end }}
           {{ end }}
-        {{ end }}
         </div>
 
       </div>
