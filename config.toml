@@ -42,7 +42,7 @@ recent_posts_number = 999
   background_color_class = "bg-black"
   site_background_image = ""
   cover_dimming_class = "bg-black-20"
-  env = "production" # development | production
+  env = "development" # development | production
   social_image = "/images/aga-social.jpg"
 
 [[params.ananke_socials]]
