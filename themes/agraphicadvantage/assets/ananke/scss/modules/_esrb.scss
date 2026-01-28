@@ -1,0 +1,12 @@
+.esrb {
+    margin: 0 auto;
+
+    @include atMedium {
+        margin: 0 0 0 1.5rem;
+    }
+
+    img {
+        max-width: 3rem;
+        display: block;
+    }
+}

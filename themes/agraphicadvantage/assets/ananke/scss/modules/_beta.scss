@@ -1,0 +1,27 @@
+.beta {
+    &--text {
+        text-align: center;
+
+        @include atMedium {
+            text-align: left;
+        }
+
+        @include atMax {
+            text-align: center;
+        }
+    }
+    
+    &--image {
+        width: 100%;
+        text-align: center;
+    
+        @include atMedium {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+
+    &--characters {
+        background-size: 100% auto;
+    }
+}

@@ -1,0 +1,27 @@
+.ananke-socials a{
+  display: inline-block;
+  vertical-align: middle;
+  color: #e9e9e9;
+  fill: currentColor;
+}
+.ananke-socials a {
+  margin-top: 6px;
+}
+.ananke-socials a .icon svg{
+  width: 40px;
+  height: 40px;
+}
+.ananke-socials a:hover {
+  color: rgb(107, 114, 128);
+}
+.new-window {
+  opacity: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.link-transition:hover .new-window{
+  opacity: 1;
+}
+.ananke-socials a.twitter:hover {
+  color: #fff !important;
+}

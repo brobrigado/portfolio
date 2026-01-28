@@ -1,0 +1,37 @@
+{{ $services := where site.RegularPages "Type" "page" }}
+{{ $services = where $services "Params.categories" "intersect" (slice "Services") }}
+{{ $services_sorted := ($services.ByParam "categories_weight").Reverse }}
+{{ $services_count := $services | len }}
+
+<div class="services">
+    {{ $i := 0 }}
+    <div id="cards" style="--numcards: {{ $services_count }};">
+
+      {{ range $services_sorted }}
+        {{ $i = add $i 1 }}
+        {{ $title := .Params.title }}
+        <div class="card" id="card_{{ $i }}">
+          <div class="card__content">
+            <div class="services--card gradient-border">
+              <div class="services--image">
+                {{ with resources.Get .Params.featured_image }}
+                    <img src="{{ (.Fill "1280x720 webp q90 top").RelPermalink }}" alt="{{ $title }}">
+                {{ end }}
+              </div>
+              <div class="services--details glass pa2 pa4-ns">
+                <h2 class="f3 f2-ns mt0 lh-title mb2">{{ $title }}</h2>
+                <p class="f5 f4-ns ma0 mb2 mb3-ns">
+                  {{ .Params.description | safeHTML  }}
+                </p>
+                <a class="f5 f6-ns cta-link" href="{{ .RelPermalink }}">Read More</a>
+              </div>
+              <div class="services--outlined-text">
+                <h1 class="text-stroke text-stroke--white">{{ $title }}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+
+    </div>
+  </div>

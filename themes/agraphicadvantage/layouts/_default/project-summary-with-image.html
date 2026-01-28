@@ -1,0 +1,59 @@
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+{{ $title := .Title }}
+{{ $id := delimit (shuffle (seq 1 9)) "" }}
+
+<div class="project-timeline--project">
+  <div class="project-timeline--bg">
+
+    <div class="relative project-timeline--card">
+      {{/*  <h1 class="project-timeline--client text-stroke text-stroke--white">{{ .Params.client }}</h1>  */}}
+      <div class="project-timeline--grid">
+
+        <div class="project-timeline--details-column">
+          <div class="project-timeline--details mw8 center white tc">
+
+            <div class="project-timeline--details-box relative pa3 pa4-ns">
+
+              <div class="project-timeline--date">{{ .Params.date.Format .Site.Params.date_format }}</div>
+
+              <h1 class="f3 f2-ns mt2 lh-title mb2">
+                <a href="{{.RelPermalink}}" class="dim link white">
+                  {{ .Title }}
+                  </a>
+              </h1>
+              <h3 class="mt0">{{ .Params.client }}</h3>
+              
+              {{/*  <div class="f4 f4-ns ma0 mb2 mb3-ns">
+                {{ .Params.description | safeHTML }}
+                {{- partial "tags.html" . -}}
+              </div>  */}}
+
+              <a class="f5 f6-ns cta-link" href="{{ .RelPermalink }}">{{ $.Param "read_more_copy" | default (i18n "viewProject") }}</a>
+            </div>
+            
+          </div>
+      
+        </div>
+
+        {{ $project_url := .RelPermalink }}
+
+        {{ with resources.Get .Params.featured_image }}
+          <div class="project-timeline--image-column tc">
+            <div id="target-{{ $id }}" class="project-timeline--image-wrapper">
+              <a class="project-timeline--image db" href="{{ $project_url }}">
+                <img class="db center" src="{{ (.Resize "1120x webp q90").RelPermalink }}">
+              </a>
+            </div>
+            <div id="button-{{ $id }}" class="project-timeline--expand-button" onclick="expandImage('{{ $id }}')">
+              Expand
+            </div>
+          </div>
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+

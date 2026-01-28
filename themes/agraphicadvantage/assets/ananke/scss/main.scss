@@ -1,0 +1,185 @@
+@import "utilities/fonts";
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/grow-on-hover";
+@import "utilities/skew";
+@import "utilities/gradient";
+@import "utilities/magnific-popup";
+@import "utilities/text-stroke";
+@import "utilities/text-stagger";
+@import "utilities/text-animation";
+@import "grid";
+@import "modules/nav";
+@import "modules/hero-area";
+@import "modules/hero-post";
+@import "modules/cta-link";
+@import "modules/trailer";
+@import "modules/game-info";
+@import "modules/capsule";
+@import "modules/dropdown";
+@import "modules/footer-logos";
+@import "modules/client-logos";
+@import "modules/esrb";
+@import "modules/box-with-corners";
+@import "modules/beta";
+@import "modules/splat";
+@import "modules/project-timeline";
+@import "modules/animation";
+@import "modules/glassmorphism";
+@import "modules/services";
+@import "modules/content-section";
+@import "modules/gallery";
+@import "modules/mfp";
+
+// *{scroll-behavior: smooth;}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+    flex: 1;
+  }
+
+footer {
+    flex: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $color--main;
+}
+
+.nested-links a {
+    color: $color--alt;
+    text-decoration: none;
+
+    &:hover {
+        color: $color--alt-hover;
+    }
+}
+
+aside {
+    display: none;
+
+    @include atSmall {
+        display: block;
+    }
+
+    .nested-links a {
+        color: #777;
+        text-decoration: none;
+    
+        &:hover {
+            color: $color--alt;
+        }
+    }
+}
+
+.tags {
+    a {
+        color: #777;
+        text-decoration: none;
+    
+        &:hover {
+            color: $color--alt;
+        }
+    }
+}
+
+
+.bg {
+    background-color: $color--main;
+}
+
+.bg-alt {
+    background-color: $color--main-dark;
+}
+
+.bg-alt {
+    background-color: $color--alt;
+}
+
+.title-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    h2 {
+        z-index: 5;
+        text-shadow: 0px 0px 8px #000;
+        display: none;
+    }
+
+    img {
+        // position: absolute;
+        z-index: 0;
+        opacity: 1;
+    }
+}
+
+.title-bg {
+    position: absolute;
+    width: 84%;
+
+    @include atSmall {
+        width: auto;
+    }
+}
+
+.section-title {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.75rem 2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.site-font {
+    font-family: 'Alexandria', sans-serif;
+
+    strong {
+        font-weight: 700;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-family: 'FuturaXBlk', sans-serif;
+        font-weight: 400;
+    }
+
+    h2, h3, h4, h5 {
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+    }
+}
+
+.headline404 {
+    font-size: 8rem;
+    margin: 3rem 0 0;
+
+    @include atMedium {
+        font-size: 18rem;
+        margin: 0 0 -3rem;
+    }
+}
+
+.bg-featured-image {
+    background-image: url(/images/twdb-hero-bg.jpg);
+}
+
+p + h2, p + h3 {
+    margin-top: 3.5rem;
+
+    @include atMedium {
+        margin-top: 4rem;
+    }
+}
+
+.instapaper_ignoref {
+    display: none;
+}

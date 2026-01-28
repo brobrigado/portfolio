@@ -1,0 +1,30 @@
+{{ if .Params.gallery }}
+<section id="gallery" class="bg-top contain bg-black-50">
+    <div class="content-section pa3 pv5-ns mw8 center">
+        <div class="mt4 mb4 mt0-ns mb4-ns">
+            <h2 class="f2 f1-ns lh-solid ma0 white">Gallery</h2>
+        </div>
+        <div class="gallery">
+            <div class="image-caption-gallery">
+                <div class="gallery--grid">
+                    {{ range $gallery := .Params.gallery }}
+
+                        {{ with resources.Get $gallery.image }}
+                            {{ $image := (.Resize "1080x webp") }}
+                            {{ $thumb := (.Resize "400x webp") }}
+                            <a class="gallery--slide grow" title="{{ $gallery.title }}" href="{{ $image.RelPermalink }}">
+                                <img class="gallery--image" src="{{ ($thumb.Fill "600x400 top").RelPermalink }}" alt="">
+                            </a>
+                        {{ end }}
+
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="return-gallery">
+            {{- partial "return.html" . -}}
+        </div>
+    </div>
+</section>
+{{ end }}
+

@@ -1,0 +1,22 @@
+.game-info {
+    &--characters {
+        padding-bottom: 10rem;
+        background-size: 100% auto;
+
+        @include atSmall {
+            padding-bottom: 10rem;
+        }
+
+        @include atMedium {
+            padding-bottom: 14rem;
+        }
+
+        @include atLarge {
+            padding-bottom: 28rem;
+        }
+
+        @include atMax {
+            background-size: auto;
+        }
+    }
+}

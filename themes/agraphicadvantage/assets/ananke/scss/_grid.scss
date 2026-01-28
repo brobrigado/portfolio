@@ -1,0 +1,52 @@
+.grid {
+    display: grid;
+    gap: 1rem;
+
+    @include atMedium {
+        gap: 1.5rem;
+    }
+
+    &--1column {
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+        .column {
+            width: 100%;
+
+            @include atMedium {
+                width: 60%;
+            }
+        }
+    }
+    
+    &--2column {
+        grid-template-columns: 1fr;
+
+        @include atMedium {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    &--3column {
+        grid-template-columns: 1fr;
+
+        @include atSmall {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include atMedium {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+}
+
+.grid--1column-max {
+    @include atMax {
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+        .column {
+            width: 60%;
+        }
+    }
+}

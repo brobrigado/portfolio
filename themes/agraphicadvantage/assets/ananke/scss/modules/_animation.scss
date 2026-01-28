@@ -1,0 +1,75 @@
+@keyframes reveal {
+    from {
+        opacity: 0.5;
+        // clip-path: inset(45% 20% 45% 20%);
+    }
+    to {
+        opacity: 1;
+        // clip-path: inset(0% 0% 0% 0%);
+    }
+}
+
+.revealing-image {
+    view-timeline-name: --revealing-image;
+    view-timeline-axis: block;
+
+    animation: linear reveal both;
+    animation-timeline: --revealing-image;
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes reveal-up {
+    from {
+        margin-top: 20rem;
+    }
+    to {
+        margin-top: 1.5rem;
+    }
+}
+
+.revealing-image-up {
+    view-timeline-name: --revealing-image-up;
+    view-timeline-axis: block;
+
+    animation: linear reveal-up both;
+    animation-timeline: --revealing-image-up;
+    animation-range: entry 25% cover 50%;
+}
+
+
+
+@keyframes reveal-left {
+    from {
+        margin-left: -30rem;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+.revealing-image-left {
+    view-timeline-name: --revealing-image-left;
+    view-timeline-axis: block;
+
+    animation: linear reveal-left both;
+    animation-timeline: --revealing-image-left;
+    animation-range: entry 25% cover 50%;
+}
+
+@keyframes reveal-right {
+    from {
+        margin-left: 30rem;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+.revealing-image-right {
+    view-timeline-name: --revealing-image-right;
+    view-timeline-axis: block;
+
+    animation: linear reveal-right both;
+    animation-timeline: --revealing-image-right;
+    animation-range: entry 25% cover 50%;
+}

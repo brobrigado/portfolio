@@ -1,0 +1,58 @@
+.splat {
+    // position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 240px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @include atSmall {
+            width: 450px;
+        }
+    }
+
+    h2 {
+        z-index: 2;
+        text-shadow: 0 0 6px #000;
+    }
+}
+
+.splat.splat-1 {
+    &::before {
+        background-image: url(/images/splat-1.png);
+        height: 140px;
+
+        @include atSmall {
+            height: 268px;
+        }
+    }
+}
+
+.splat.splat-2 {
+    &::before {
+        background-image: url(/images/splat-2.png);
+        height: 200px;
+
+        @include atSmall {
+            height: 268px;
+        }
+    }
+}
+
+.splat.splat-3 {
+    &::before {
+        background-image: url(/images/splat-3.png);
+        width: 320px;
+        height: 200px;
+        top: -90px;
+
+        @include atSmall {
+            width: 480px;
+            height: 268px;
+            top: -120px;
+        }
+    }
+}

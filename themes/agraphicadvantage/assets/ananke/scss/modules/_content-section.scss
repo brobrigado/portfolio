@@ -1,0 +1,11 @@
+.content-section {
+    width: 100%;
+
+    @include atMedium {
+        width: 80%;
+    }
+
+    @include atLarge {
+        width: 70%;
+    }
+}

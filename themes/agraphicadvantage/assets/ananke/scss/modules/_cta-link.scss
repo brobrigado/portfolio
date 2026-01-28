@@ -1,0 +1,46 @@
+.cta-link {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    margin-bottom: 0.25em;
+    background: $color--alt;
+    border-radius: 0.5rem;
+
+    &--subtle {
+        background-color: #444;
+        color: #cacaca !important;
+        margin-bottom: 2rem;
+
+        &:hover, &:visited, &:focus {
+            color: #cacaca !important;
+        }
+    }
+}
+
+.return-single {
+    .cta-link {
+        display: none;
+    
+        // @include atMedium {
+        //     display: inline-block;
+        // }
+    }
+}
+
+.return-gallery {
+    .cta-link {
+        display: inline-block;
+
+        // @include atMedium {
+        //     display: none;
+        // }
+    }
+}

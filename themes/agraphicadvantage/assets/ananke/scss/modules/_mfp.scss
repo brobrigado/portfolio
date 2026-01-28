@@ -1,0 +1,22 @@
+.mfp {
+    &-bg {
+        opacity: 1;
+    }
+
+    &-container {
+        padding: 2.5rem 4rem;
+    }
+
+    &-bottom-bar {
+        margin-top: -1.5rem;
+    }
+}
+
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+  }

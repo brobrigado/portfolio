@@ -1,0 +1,89 @@
+.text-stagger {
+    position: relative;
+    z-index: 0;
+    // display: none;
+    display: block;
+
+    @include atSmall {
+        display: block;
+    }
+
+    &--el {
+        margin: 0;
+        position: absolute;
+        font-size: 12rem;
+
+        @include atSmall {
+            font-size: 16rem;
+        }
+    
+        @include atMedium {
+            font-size: 18rem;
+        }
+    
+        @include atLarge {
+            font-size: 20rem;
+        }
+    }
+
+    .stagger-1 {
+        // left: -10%;
+        margin-top: 70px;
+        margin-top: 30px;
+        
+        @include atSmall {
+            // left: -20%;
+            margin-top: 20px;
+        }
+    }
+    
+    .stagger-2 {
+        margin-top: 240px;
+        margin-top: 270px;
+        left: -6%;
+        
+        @include atSmall {
+            left: -10%;
+            margin-top: 260px;
+        }
+        
+        @include atMedium {
+            margin-top: 280px;
+        }
+    }
+    
+    .stagger-3 {
+        margin-top: 410px;
+        margin-top: 520px;
+        // left: -2%;
+        
+        @include atSmall {
+            // left: -12%;
+            margin-top: 510px;
+        }
+        
+        @include atMedium {
+            margin-top: 530px;
+        }
+    }
+}
+
+.hero-area--header-home {
+    .text-stagger {
+        &--el {
+            font-size: 16rem;
+    
+            // @include atSmall {
+            //     font-size: 16rem;
+            // }
+        
+            @include atMedium {
+                font-size: 18rem;
+            }
+        
+            @include atLarge {
+                font-size: 20rem;
+            }
+        }
+    }
+}

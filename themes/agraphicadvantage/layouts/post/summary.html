@@ -1,0 +1,21 @@
+  <div class="mb3 pa4 {{ $.Param "text_color" | default "mid-gray" }} overflow-hidden">
+    {{ $page_url := .RelPermalink }}
+    {{ with resources.Get .Params.featured_image }}
+      <a href="{{ $page_url }}">
+        <img class="mb3" src="{{ (.Fill "1080x900 webp q90 top").RelPermalink }}">
+      </a>
+    {{ end }}
+    <!-- {{ if .Params.date }}
+      <div class="f6 bg-mid-gray black pa2 di br2">
+        {{ .Params.date | time.Format (default "January 2, 2006" .Site.Params.date_format) }}
+      </div>
+    {{ end }} -->
+    <h1 class="f3">
+      <a href="{{ .RelPermalink }}" class="link white">
+        {{ .Title }}
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      {{ .Summary  }}
+    </div>
+  </div>

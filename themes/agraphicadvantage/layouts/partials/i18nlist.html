@@ -1,0 +1,19 @@
+{{ if .IsTranslated }}
+<div class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
+    <div class="dropdown mt1">
+        <img onclick="showDropdown()" class="dropbtn" src="{{ .Site.Params.flag }}">
+        <div id="myDropdown" class="dropdown-content">
+            <ul class="ma0 pa0">
+                {{ range .Translations }}
+                <li class="list mt2">
+                    <a class="hover-white no-underline white-90" href="{{ .RelPermalink }}">
+                        <img src="{{ .Site.Params.flag }}">
+                        <span class="dn">{{ .Lang }}</span>
+                    </a>
+                </li>
+                {{ end}}
+            </ul>
+        </div>
+    </div>
+</div>
+{{ end }}

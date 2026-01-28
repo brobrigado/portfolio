@@ -1,0 +1,12 @@
+/* Breakpoints */
+$screenSize--small: 576px;
+$screenSize--medium: 959px; //768px;
+$screenSize--large: 1200px; //1440px; //1080px; //65ch;
+$screenSize--max: 2000px;
+
+/* Colors */
+$color--main: #111;
+$color--main-dark: darken($color--main, 20%);
+$color--main-light: lighten($color--main, 4%);
+$color--alt: #D42126;
+$color--alt-hover: darken($color--alt, 6%);

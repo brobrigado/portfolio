@@ -1,0 +1,132 @@
+{{ define "main" }}
+
+  <section id="clients" class="bg-top cover" style="background-image: url({{ .Params.clients_bg }});">
+    <div class="bg-black-60">
+
+        <div class="content-section pa3 pa4-ns pt5-ns pb5-ns mw8 center clients-container">
+          {{ if .Params.clients_title }}
+          <div class="title-container mt4 mb4 mt0-ns mb4-ns">
+            {{ if .Params.clients_title_graphic }}
+              {{/*  <img class="animate__animated animate__tada" src="{{ .Params.clients_title_graphic }}" alt="{{ .Params.clients_title }}">  */}}
+              <div class="animate__animated animate__fadeInUp animate__delay-3s">
+                <img class="heartbeat" src="{{ .Params.clients_title_graphic }}" alt="{{ .Params.clients_title }}">
+              </div>
+            {{ end }}
+            <h2 class="f2 f1-ns lh-solid ma0 tc white">{{ .Params.clients_title }}</h2>
+          </div>
+          {{ end }}
+
+          <div class="client-logos">
+            {{ range $clients_logos := .Params.clients_logos }}
+            {{ if $clients_logos.link }}
+              <a class="client-logos--link {{ $clients_logos.css_class }}" target="_blank" href="{{ $clients_logos.link }}">
+                <img src="{{ $clients_logos.image }}">
+              </a>
+            {{ else }}
+              <div class="client-logos--link {{ $clients_logos.css_class }}">
+                <img src="{{ $clients_logos.image }}">
+              </div>
+            {{ end }}
+          {{ end }}
+          </div>
+
+        </div>
+
+    </div>
+  </section>
+
+  <section id="services" class="bg-top contain bg-black" style="background-image: url({{ .Params.services_bg }});">
+    <div class="bg-black-10">
+
+      <div class="content-section pa3 pa4-ns pt5-ns pb2-ns mw9 center">
+        {{ if .Params.services_title }}
+        <div class="title-container mt4 mb4 mt0-ns mb4-ns">
+          {{ if .Params.services_title_graphic }}
+            <img class="heartbeat"  src="{{ .Params.services_title_graphic }}" alt="{{ .Params.services_title }}">
+          {{ end }}
+          <h2 class="f2 f1-ns lh-solid ma0 tc white">{{ .Params.services_title }}</h2>
+        </div>
+        {{ end }}
+
+        {{ partial "home-services.html" . }}
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="bg-top" style="background-image: url({{ .Params.projects_bg }});">
+
+
+      <div class="content-section pa3 pa4-ns pt5-ns pb5-ns mw9 center">
+        {{ if .Params.projects_title }}
+        <div class="title-container mt4 mb4 mt0-ns mb4-ns">
+          {{ if .Params.projects_title_graphic }}
+            <img class="heartbeat"  src="{{ .Params.projects_title_graphic }}" alt="{{ .Params.projects_title }}">
+          {{ end }}
+          <h2 class="f2 f1-ns lh-solid ma0 tc white">{{ .Params.projects_title }}</h2>
+        </div>
+        {{ end }}
+
+    {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
+    {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
+    {{/* Create a variable with that section to use in multiple places. */}}
+    {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
+    {{/* Check to see if the section is defined for ranging through it */}}
+    {{ $section_count := len $section }}
+    {{ if ge $section_count 1 }}
+      {{/* Derive the section name  */}}
+      {{ $section_name := index (.Site.Params.mainSections) 0 }}
+  
+
+  
+        {{ $n_posts := $.Param "recent_posts_number" | default 99 }}
+  
+        <div class="project-timeline">
+          {{/* Range through the first $n_posts items of the section */}}
+          {{ range (first $n_posts $section) }}
+            {{ .Render "project-summary-with-image" }}
+          {{ end }}
+        </div>
+
+        {{/* 
+        <div class="w-100">
+          {{ with .Site.GetPage "section" $section_name }}
+            <a href="{{ .RelPermalink }}" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">{{ i18n "allTitle" . }}</a>
+          {{ end }}
+        </div>
+        */}}
+
+
+    {{ end }}
+
+      </div>
+
+  </section>
+
+  <section id="contact" style="background-image: url({{ .Params.contact_bg }});">
+    <div class="bg-black-60">
+
+        <div class="content-section pa3 pa4-ns pt5-ns pb5-ns mw9 center contact-container">
+          {{ if .Params.contact_title }}
+          <div class="title-container mt4 mb4 mt0-ns mb4-ns">
+            {{ if .Params.contact_title_graphic }}
+              <img class="heartbeat"  src="{{ .Params.contact_title_graphic }}" alt="{{ .Params.contact_title }}">
+            {{ end }}
+            <h2 class="f2 f1-ns lh-solid ma0 tc white">{{ .Params.contact_title }}</h2>
+          </div>
+          {{ end }}
+          <div class="grid grid--1column">
+            <div class="column">
+              <div class="contact-form tc">
+                <div class="nested-copy-line-height lh-copy f4 nested-links white">
+                  {{ partial "contact-form.html" . }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{ end }}

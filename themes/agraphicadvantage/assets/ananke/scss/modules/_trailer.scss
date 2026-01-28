@@ -1,0 +1,32 @@
+.trailer {
+    position: relative;
+
+    &--image {
+        display: block;
+        width: 100%;
+    }
+
+    &--icon {
+        position: absolute;
+        width: 12%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.trailer-characters {
+    background-size: 140% auto;
+    
+    @include atSmall {
+        background-size: auto;
+    }
+}
+
+// .trailer-container {
+//     padding-bottom: 14rem;
+
+//     @include atSmall {
+//         padding-bottom: 38rem;
+//     }
+// }

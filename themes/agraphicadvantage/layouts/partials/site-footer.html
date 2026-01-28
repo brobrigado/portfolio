@@ -1,0 +1,30 @@
+<footer class="{{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
+  <div class="pa0 pa3-ns">
+    <div class="flex flex-column-reverse flex-row-ns justify-center justify-between-ns content-center">
+      <div class="5 fw4 hover-white no-underline white-70 dib-ns pv2-ns ph3-ns tc tl-ns" >
+        {{ .Params.footer_legal }}
+      </div>
+      <div class="flex flex-column-reverse flex-row-ns justify-center justify-between-ns content-center">
+        <div class="flex flex-wrap flex-nowrap-ns justify-center footer-logos mv2 mv0-ns">
+          <div class="footer-logos--link aga">
+            <img src="{{ .Site.Params.footer_logo }}">
+          </div>
+          {{ range $footer_logos := .Params.footer_logos }}
+            {{ if $footer_logos.link }}
+              <a class="footer-logos--link {{ $footer_logos.css_class }}" target="_blank" href="{{ $footer_logos.link }}">
+                <img src="{{ $footer_logos.image }}">
+              </a>
+            {{ else }}
+              <div class="footer-logos--link {{ $footer_logos.css_class }}">
+                <img src="{{ $footer_logos.image }}">
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+        <div class="esrb">
+          <img src="{{ .Params.footer_rating }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

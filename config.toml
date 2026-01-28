@@ -1,0 +1,50 @@
+title = "aGraphicAdvantage"
+baseURL = "https://www.agraphicadvantage.com/"
+languageCode = "en-us"
+theme = "agraphicadvantage"
+resourceDir = "../resources"
+
+DefaultContentLanguage = "en"
+# SectionPagesMenu = "main"
+pagination.pagerSize = 12
+googleAnalytics = ""
+enableRobotsTXT = true
+recent_posts_number = 999
+
+# disableKinds = ["section", "taxonomy", "taxonomyTerm"]
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+
+[languages]
+  [languages.en]
+    title = "Video Game Websites"
+    weight = 1
+    contentDir = "content/en"
+    # languageDirection = 'rtl' for Right-To-Left languages
+    [languages.en.params]
+      flag = "/images/theme/flags/US.svg"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  date_format = "January 02 2006"
+  text_color = "white"
+  author = ""
+  favicon = ""
+  site_logo = "/images/aga-logo.png"
+  footer_logo = "/images/aga-logo-2024-1c-dark.png"
+  # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  site_background_image = ""
+  cover_dimming_class = "bg-black-20"
+  env = "development" # development | production
+  social_image = "/images/aga-social.jpg"
+
+[[params.ananke_socials]]
+name = "twitter"
+url = "https://twitter.com/"

@@ -1,0 +1,23 @@
+.gallery {
+    &--grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+
+        @include atSmall {
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @include atMedium {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+        }
+    }
+}
+
+#gallery {
+    .content-section {
+        width: auto;
+    }
+}

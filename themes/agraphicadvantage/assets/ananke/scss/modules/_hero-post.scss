@@ -1,0 +1,24 @@
+.hero-post {
+    &--details {
+        color: #222;
+        display: none;
+
+        @include atMedium {
+            display: block;
+        }
+    }
+
+    .text-stroke {
+        line-height: 0.8em;
+        left: 0;
+        right: 0;
+        top: 25%;
+        transform: translateY(-25%);
+
+        display: none;
+
+        @include atMedium {
+            display: block;
+        }
+    }
+}
