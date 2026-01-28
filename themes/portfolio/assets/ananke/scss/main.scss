@@ -141,19 +141,18 @@ aside {
 }
 
 .site-font {
-    font-family: 'Alexandria', sans-serif;
+    font-family: "Cabin", sans-serif;
 
     strong {
         font-weight: 700;
     }
 
     h1, h2, h3, h4, h5 {
-        font-family: 'FuturaXBlk', sans-serif;
-        font-weight: 400;
+        font-family: "Cabin", sans-serif;
+        font-weight: 700;
     }
 
     h2, h3, h4, h5 {
-        text-transform: uppercase;
         letter-spacing: -0.05em;
     }
 }

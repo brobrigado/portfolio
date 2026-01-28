@@ -9,57 +9,39 @@
 {{ if .Params.hero_image_1 }}
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
   {{ if .Params.is_home }}
-    <header class="hero-area--header hero-area--header-home gradient-bg">
+    <header class="hero-area--header hero-area--header-home ocean-container">
   {{ else }}
-    <header class="hero-area--header gradient-bg">
+    <header class="hero-area--header ocean-container">
   {{ end }}
       {{/*  <div class="{{ .Site.Params.cover_dimming_class | default "bg-black-60" }}">  */}}
-        <div class="text-stagger">
-          <h1 class="text-stroke text-stagger--el stagger-1 nowrap el">{{ .Params.hero_text1 }}{{ .Params.hero_text1 }}{{ .Params.hero_text1 }}</h1>
-          <h1 class="text-stroke text-stagger--el stagger-2 nowrap el">{{ .Params.hero_text2 }}{{ .Params.hero_text2 }}{{ .Params.hero_text2 }}</h1>
-          <h1 class="text-stroke text-stagger--el stagger-3 nowrap el">{{ .Params.hero_text3 }}{{ .Params.hero_text3 }}{{ .Params.hero_text3 }}</h1>
-        </div>
 
-        {{ partial "site-navigation.html" .}}
+<div class="ocean">
+  <div class="wave"></div>
+  <div class="wave wave2"></div>
+</div>
   
         <div class="pv3 pv5-ns ph3 ph4-ns w-100 w-90-ns mw9 center relative z-999">
           <div class="hero-area">
             <div class="grid grid--2column">
               <div class="column">
-                <div class="f4 f3-ns tc tl-ns hero-area--copy">
-                  <div class="glass pa3 pa4-ns animate__animated animate__bounceInLeft">
-                    {{ .Content | safeHTML  }}
+                <div class="hero-area--details">
+                  <div class="mb3 mb0-ns hero-area--image">
+                    {{ with resources.Get .Params.hero_image_1 }}
+                      <img class="hero-area--photo" src="{{ (.Fill "640x640 webp q90 top").RelPermalink }}">
+                    {{ end }}
                   </div>
                 </div>
               </div>
               <div class="column">
-                <div class="hero-area--details">
-                  <div class="mb3 mb4-ns hero-area--image">
-                    
+                <div class="f4 f3-ns tc tl-ns hero-area--copy">
+                  <div class="pa3 pa4-ns animate__animated">
+                    {{ .Content | safeHTML  }}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="hero-area--image-breakout">
-          {{/*  <img class="animate__animated animate__slideInUp animate__delay-1s" src="{{ $hero_image }}">  */}}
-          {{ with resources.Get .Params.hero_image_3 }}
-            <img class="hero-area--image-3 shadow-2" src="{{ (.Fill "1080x960 webp q90 top").RelPermalink }}">
-          {{ end }}
-          {{ with resources.Get .Params.hero_image_2 }}
-          <img class="hero-area--image-2 shadow-2" src="{{ (.Fill "1080x960 webp q90 top").RelPermalink }}">
-          {{ end }}
-          {{ with resources.Get .Params.hero_image_1 }}
-            <img class="hero-area--image-1 shadow-2" src="{{ (.Fill "1080x960 webp q90 top").RelPermalink }}">
-          {{ end }}
-        </div>
-          {{/*  <div class="hero-area--featured-image">
-            <img src="{{ (.Fill "1080x900 webp q90 top").RelPermalink }}">
-          </div>  */}}
-
-    {{/*  </div>  */}}
   </header>
 {{ else }}
   <header>

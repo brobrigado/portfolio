@@ -13,6 +13,18 @@ nav {
         align-items: center;
     }
 
+    .grid--2column {
+        grid-template-columns: 1fr;
+
+        @include atMedium {
+            grid-template-columns: 1fr 1.25fr;
+        }
+
+        @include atLarge {
+            grid-template-columns: 1fr 1.5fr;
+        }
+    }
+
     &--details {
         // max-width: 640px;
         // margin-bottom: 0rem;
@@ -20,30 +32,42 @@ nav {
         // background-color: black;
 
         z-index: 2;
-
-        .grid--2column {
-            grid-template-columns: 1fr;
-
-            @include atLarge {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
     }
 
     &--copy {
+        text-align: center;
+
+        @include atMedium {
+            text-align: left;
+        }
+
         h1 {
             font-size: 2rem;
-            margin-top: 0;
+            margin: 0 0 0.5rem;
             color: #222;
 
             @include atSmall {
-                font-size: 2.25rem;
+                font-size: 3rem;
+            }
+        }
+        h2 {
+            font-size: 1.25rem;
+            margin: 0 0 0.5rem;
+            color: #222;
+
+            @include atSmall {
+                font-size: 1.5rem;
             }
         }
         p {
-            margin: 1rem 0;
+            font-size: 1rem;
+            margin: 0.5rem 0;
             color: #222;
             // text-shadow: 0 0 10px #000;
+
+            @include atSmall {
+                font-size: 1.25rem;
+            }
         }
 
         // p + p {
@@ -58,13 +82,39 @@ nav {
             border: 0;
             vertical-align: middle;
             text-decoration: none;
-            font-weight: 900;
+            font-size: 1rem;
+            font-weight: 700;
             color: #fff;
             text-transform: uppercase;
-            padding: 1rem 3rem;
-            margin: 1rem 0.25rem 0;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0 0;
             background: $color--alt;
             border-radius: 0.2em;
+
+            @include atSmall {
+                font-size: 1.25rem;
+                padding: 1rem 2rem;
+            }
+        }
+
+        .contact-details {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -0.5rem;
+
+            li {
+                margin: 0 0.5rem;
+            }
+
+            i {
+                color: #444;
+            }
+            
+            @include atMedium {
+                justify-content: left;
+            }
         }
 
     }
@@ -73,6 +123,10 @@ nav {
         max-width: 440px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    &--photo {
+        border-radius: 50%;
     }
 
     &--image-breakout {
@@ -129,16 +183,16 @@ nav {
     }
 
     &--header {
-        min-height: 360px;
-        overflow: hidden;
+        // min-height: 360px;
+        // overflow: hidden;
 
         @include atSmall {
-            min-height: 500px;
+            // min-height: 500px;
         }
 
         @include atMedium {
             height: 860px;
-            min-height: 860px;
+            // min-height: 860px;
         }
 
         .clients {
@@ -147,13 +201,13 @@ nav {
             text-align: center;
         }
 
-        &-home {
-            min-height: 770px;
+        // &-home {
+        //     min-height: 770px;
     
-            @include atSmall {
-                min-height: 800px;
-            }
-        }
+        //     @include atSmall {
+        //         min-height: 800px;
+        //     }
+        // }
     }
 
     &--featured-image {
@@ -171,4 +225,48 @@ nav {
         }
     }
 
+}
+
+.ocean-container {
+    position: relative;
+    background: radial-gradient(rgba(255,254,234,1) 0%, rgba(255,254,234,1) 10%, #a2e0e4 100%);
+}
+
+.ocean {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+  position: absolute;
+  width: 6400px;
+  top: -198px;
+  left: 0;
+  height: 198px;
+  transform: translate(0, 0, 0);
+  animation: wave 7s ease infinite;
+}
+
+.wave:nth-of-type(2) {
+  top: -168px;
+  animation: swell 4s ease infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% { margin-left: 0; }
+  100% { margin-left: -1600px;}
+}
+@keyframes swell {
+  0%, 100% {
+    transform: translate(0, -30px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
 }
