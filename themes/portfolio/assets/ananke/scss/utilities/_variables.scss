@@ -11,4 +11,4 @@ $color--main-dark: darken($color--main, 20%);
 $color--main-light: lighten($color--main, 16%);
 // $color--alt: #D42126;
 $color--alt: #0f2081;
-$color--alt-hover: darken($color--alt, 6%);
+$color--alt-hover: lighten($color--alt, 16%);

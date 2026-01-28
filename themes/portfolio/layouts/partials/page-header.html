@@ -31,34 +31,5 @@
         </div>
     </div>
   </header>
-{{ else }}
-  {{ if .Params.featured_image }}
-    {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-    <header class="hero-area--header gradient-bg">
-      <div class="{{ .Site.Params.cover_dimming_class | default "bg-black-60" }}">
-        <div class="text-stagger">
-          <h1 class="text-stroke text-stagger--el stagger-1 nowrap el">{{ .Params.hero_text1 }}{{ .Params.hero_text1 }}{{ .Params.hero_text1 }}</h1>
-          <h1 class="text-stroke text-stagger--el stagger-2 nowrap el">{{ .Params.hero_text2 }}{{ .Params.hero_text2 }}{{ .Params.hero_text2 }}</h1>
-          <h1 class="text-stroke text-stagger--el stagger-3 nowrap el">{{ .Params.hero_text3 }}{{ .Params.hero_text3 }}{{ .Params.hero_text3 }}</h1>
-        </div>
-  
-        {{ partial "site-navigation.html" . }}
-  
-        <div class="flex-l flex-wrap items-center justify-center mw8 center ph3 hero-area--featured">    
-          {{ with resources.Get .Params.featured_image }}
-            <div class="hero-area--featured-image">
-              <img src="{{ (.Fill "1080x900 webp q90 top").RelPermalink }}">
-            </div>
-          {{ end }}
-        </div>
-      </div>
 
-    </header>
-  {{ else }}
-    <header>
-      <div class="{{ .Site.Params.background_color_class | default "bg-black" }}">
-        {{ partial "site-navigation.html" . }}
-      </div>
-    </header>
-  {{ end }}
 {{ end }}

@@ -14,6 +14,14 @@
             gap: 1.5rem;
         }
     }
+
+    &--image {
+        border: 1px solid $color--alt;
+
+        &:hover {
+            border: 1px solid $color--alt-hover;
+        }
+    }
 }
 
 #gallery {

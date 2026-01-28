@@ -15,7 +15,7 @@
         {{/*with .CurrentSection.Title }}{{. | upper }}{{end*/}}
         {{ .Params.client }}
       </aside>
-      {{ partial "social-share.html" . }}
+      <!-- {{ partial "social-share.html" . }} -->
       <h1 class="f1 mt3 mb1 white">
         {{- .Title -}}
       </h1>
@@ -32,7 +32,7 @@
       {{ end }}
       {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
       {{ if not .Date.IsZero }}
-      <time class="f6 mv4 dib tracked white" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+      <time class="f6 mv2 dib tracked white" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
         {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
       </time>
       {{end}}
@@ -48,20 +48,52 @@
         <span class="f6 mv4 dib tracked"> - {{ i18n "wordCount" .WordCount }} </span>
       {{ end }}
     </header>
-    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "sans"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} w-two-thirds-l">
-      {{- .Content -}}
+    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "sans"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} ">
+      <!-- {{- .Content -}} -->
       {{- partial "tags.html" . -}}
+
+{{ if .Params.gallery }}
+<section id="gallery" class="bg-top contain">
+    <div class="content-section center">
+        <div class="mt4 mb4 mt0-ns mb4-ns">
+            <h2 class="f2 f1-ns lh-solid ma0 white">Gallery</h2>
+        </div>
+        <div class="gallery">
+            <div class="image-caption-gallery">
+                <div class="gallery--grid">
+                    {{ range $gallery := .Params.gallery }}
+
+                        {{ with resources.Get $gallery.image }}
+                            {{ $image := (.Resize "1080x webp") }}
+                            {{ $thumb := (.Resize "400x webp") }}
+                            <a class="gallery--slide" title="{{ $gallery.title }}" href="{{ $image.RelPermalink }}">
+                                <img class="gallery--image" src="{{ ($thumb.Fill "600x400 top").RelPermalink }}" alt="">
+                            </a>
+                        {{ end }}
+
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="return-gallery">
+            {{- partial "return.html" . -}}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+
       <div class="return-single">
         {{- partial "return.html" . -}}
       </div>
     </div>
 
-    <aside class="w-30-l mt3-l">
+    <!-- <aside class="w-30-l mt3-l">
       {{- partial "menu-contextual.html" . -}}
-    </aside>
+    </aside> -->
 
   </article>
 
-  {{- partial "gallery.html" . -}}
+  <!-- {{- partial "gallery.html" . -}} -->
 
 {{ end }}

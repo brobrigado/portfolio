@@ -15,7 +15,7 @@
     border-radius: 0.5rem;
 
     &--subtle {
-        background-color: #444;
+        background-color: $color--alt; // #444;
         color: #cacaca !important;
         margin-bottom: 2rem;
 
