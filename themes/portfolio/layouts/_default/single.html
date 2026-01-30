@@ -66,7 +66,7 @@
                         {{ with resources.Get $gallery.image }}
                             {{ $image := (.Resize "1080x webp") }}
                             {{ $thumb := (.Resize "400x webp") }}
-                            <a class="gallery--slide" title="{{ $gallery.title }}" href="{{ $image.RelPermalink }}">
+                            <a class="gallery--slide" target="_blank" title="{{ $gallery.title }}" href="{{ $image.RelPermalink }}">
                                 <img class="gallery--image" src="{{ ($thumb.Fill "600x400 top").RelPermalink }}" alt="">
                             </a>
                         {{ end }}
