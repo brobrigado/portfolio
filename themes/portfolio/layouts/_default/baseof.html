@@ -11,18 +11,18 @@
     {{ with .Site.Params.social_image }}
       {{ $social_image = trim . "/" | absURL }}
     {{ end }}
-    <meta property="og:image" content="{{ $social_image }}">
+    <!-- <meta property="og:image" content="{{ $social_image }}">
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:width" content="1920">
-    <meta property="og:image:height" content="1080">
+    <meta property="og:image:height" content="1080"> -->
 
-    <link rel="apple-touch-icon" sizes="180x180" href='{{ absURL "apple-touch-icon.png" }}'>
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href='{{ absURL "apple-touch-icon.png" }}'>
     <link rel="icon" type="image/png" sizes="32x32" href='{{ absURL "favicon-32x32.png" }}'>
     <link rel="icon" type="image/png" sizes="16x16" href='{{ absURL "favicon-16x16.png" }}'>
     <link rel="manifest" href='{{ absURL "site.webmanifest" }}'>
     <link rel="mask-icon" href='{{ absURL "safari-pinned-tab.svg" }}' color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#000000"> -->
 
     {{ hugo.Generator }}
     {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
@@ -37,9 +37,9 @@
     {{ partial "site-style.html" . }}
     {{ partial "site-scripts.html" . }}
     
-    {{ block "favicon" . }}
+    <!-- {{ block "favicon" . }}
       {{ partialCached "site-favicon.html" . }}
-    {{ end }}
+    {{ end }} -->
 
     {{ if .OutputFormats.Get "RSS" }}
     {{ with .OutputFormats.Get "RSS" }}
