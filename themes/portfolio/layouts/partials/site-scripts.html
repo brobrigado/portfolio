@@ -9,7 +9,7 @@
 
 
 <script type="text/javascript">
-  $('.gallery').magnificPopup({
+  $('.image-gallery').magnificPopup({
     delegate: 'a', // child items selector, by clicking on it popup will open
     type: 'image',
     gallery:{enabled:true}
@@ -39,6 +39,12 @@
     type:'inline',
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
+
+  $('.gallery--slide').magnificPopup({
+    type:'inline',
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  })
+  
 </script>
 
 <!-- <script type="text/javascript">
